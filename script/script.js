@@ -13,15 +13,9 @@ class quest{
 	}
 }
 
-class bur{
-	constructor(img,name){
-		this.img=img;
-		this.name=name;
-	}
-}
 
-let first=new bur("./image/burger.png","Standart")
-			let second=new bur("./image/burgerBlack.png","Black")
+let first=["./image/burger.png","Standart"]
+let second=["image/burgerBlack.png","Black"]
 			let q1=new quest("What colour of burgher?",first,second)
 
 	btn.addEventListener('click',( )=>{
@@ -48,8 +42,8 @@ let first=new bur("./image/burger.png","Standart")
 			<div class="answers-item d-flex flex-column">
                 <input type="radio" id="answerItem1" name="answer" class="d-none">
                 <label for="answerItem1" class="d-flex flex-column justify-content-between">
-                  <img class="answerImg" src=${q1.vars[i].img} alt="burger">
-                  <span>${q1.vars[i].name}</span>
+                  <img class="answerImg" src=${q1.vars[i][0]} alt="burger">
+                  <span>${q1.vars[i][1]}</span>
                 </label>
               </div>`
 			  
